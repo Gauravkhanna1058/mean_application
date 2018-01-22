@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Login oage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-md-12">Register</div>
+            </div>
+          </div>
+          <div class="panel-body">
+            <form name="form" (ngSubmit)="f.form.valid" #f="ngForm" novalidate>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" [(ngModel)]="model.name" name="name" class="form-control au-target" name="name"
+                  au-target-id="87"> </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" [(ngModel)]="model.email" name="email" class="form-control au-target" name="email"
+                  au-target-id="88"> </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" [(ngModel)]="model.password" name="password" class="form-control au-target"
+                  name="password" au-target-id="89"> </div>
+              <div class="form-group">
+                <label for="firm-name">First Name</label>
+                <input type="text" [(ngModel)]="model.firstname" class="form-control au-target"
+                  name="firstname" au-target-id="90"> </div>
+              <div class="form-group">
+                <input type="checkbox" checked.bind="agreeToTermsOfUse &amp; validate" id="agree" class="au-target" au-target-id="91">
+                <label for="agree"> I have read and agree to the Terms of Use found
+                  <a href="" target="_blank">here</a>. </label>
+              </div>
+              <div class="form-group"></div>
+              <button type="submit" (click)="RegisterUser()" class="btn btn-primary au-target" aubs-btn-loading="loading.bind: isRegistering; text: <span><i class='fa fa-refresh fa-spin'></i>&nbsp;Register</span>"
+                au-target-id="93">
+                <span>
+                  <i class="fa fa-user-plus"></i>&nbsp;Register</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
